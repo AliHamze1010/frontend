@@ -8,7 +8,7 @@ function HomePage() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/matches?year=2023')
+        axios.get('https://scoresimplified.onrender.com/matches?year=2023')
 
             .then(response => {
                 setMatches(response.data.data);

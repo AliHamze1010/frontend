@@ -17,7 +17,7 @@ function SignupComponent() {
         }
 
         // Make an API call to register the user
-        axios.post('http://localhost:5000/signup', {
+        axios.post('https://scoresimplified.onrender.com/signup', {
             username: name,
             email: email,
             password: password
