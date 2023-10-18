@@ -1,0 +1,91 @@
+/* About.css */
+
+.about-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f6f8fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* This is center-aligned since there's no button here */
+    align-items: center;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+header .logoLink {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .logoLink:hover {
+    text-decoration: underline;
+}
+
+/* Quote section styling */
+.quote-section {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.quote-section h2 {
+    color: #555;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+blockquote {
+    margin: 0;
+    padding-left: 20px;
+    border-left: 5px solid #007bff;
+    font-style: italic;
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Contact section styling */
+.contact-section {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
