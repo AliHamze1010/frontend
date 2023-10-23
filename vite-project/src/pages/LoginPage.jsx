@@ -7,7 +7,7 @@ function LoginPage() {
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        window.location.href = "http://localhost:5173/";
+        window.location.href = "https://frontend-kappa-beige-35.vercel.app/";
     };
 
     return (
