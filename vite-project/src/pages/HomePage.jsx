@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
     const [matches, setMatches] = useState([]);
     const [error, setError] = useState(null);
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         axios.get('https://scoresimplified.onrender.com/matches?year=2023')
@@ -31,6 +32,18 @@ function HomePage() {
             .filter(score => score.score.participant === participant)
             .reduce((total, score) => total + score.score.goals, 0);
     }
+
+    const handleDarkMode = () => {
+        setDarkMode(!darkMode);
+        if (darkMode) {
+            document.querySelector('.api-data-container').style.backgroundColor = "white";
+            document.querySelector('.api-data-container').style.color = "black";
+
+        } else {
+            document.querySelector('.api-data-container').style.backgroundColor = "black";
+            document.querySelector('.api-data-container').style.color = "white";
+        }
+    };
     
     
 
@@ -38,14 +51,15 @@ function HomePage() {
         <div className="score-simplified-container">
             <header>
                 <Link to="/" className="logoLink"><h1>Score Simplified</h1></Link>
-                <button>Settings</button>
+                <button onClick={handleDarkMode}>Dark Mode</button>
             </header>
 
             <h2>Favorite Matches</h2>
 
             {/* Display error if it exists */}
             {error && <div className="error">{error}</div>}
-
+            <label htmlFor="search">Search</label>
+                <input type="text" id="search" placeholder="Search" />
             <div className="api-data-container">
                 <div className="teams">
                     {matches.map((match, index) => (
